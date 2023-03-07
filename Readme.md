@@ -40,7 +40,9 @@ http://127.0.0.1:8000/api/counter?filename=EEDWVlSvdq.csv&column1=eye_color&colu
 will print the results of the count in the terminal.
 where ``` filename, column1, column2 ``` can be supplied with name of file and column names to be combined to make the count, respectively.
 
+
 #Code structure
+
 api - does the initial extraction and views for html pages
 transform - does the data transformation
 load - saves the final file and adds metadata to model
