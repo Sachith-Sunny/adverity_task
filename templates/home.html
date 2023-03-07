@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+
+{% block navbar-content %}
+<i style="color: yellowgreen;" class="fas fa-user-alt"></i>&nbsp;&nbsp;List
+{% endblock navbar-content %}
+
+{% block content %}
+<div class="container">
+    <br>   
+    <div class="container">
+        <a target="_blank" 
+        class="btn btn-info pull-right" 
+        href="{% url 'fetch' %}">
+        Fetch
+       </a>
+    </div>
+
+<br><br><br>    
+    <table class="table table-bordered" id ="example"style="text-align: center;">
+        <thead class="table-success">
+            <tr>
+                <th>Filename</th> 
+                <th>Created at</th>    
+                <th> View counts</th>   
+            </tr>
+        </thead>
+        {% for data in data%}
+        <tr>    
+            <td><a target="_blank" href="{% url 'view'%}?fileid={{data.name}}">{{data.name}}</a></td>
+            <td>{{data.created_at}}</td>
+            <td><a target="_blank" href="{% url 'counter'%}?fileid={{data.name}}">Go to counter</a></td>
+        </tr>
+        {% endfor %}
+    </table>
+
+
+</div>
+{% endblock content %}

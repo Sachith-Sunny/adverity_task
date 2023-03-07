@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+
+{% block navbar-content %}
+<i style="color: yellowgreen;" class="fas fa-user-alt"></i>&nbsp;&nbsp;List
+{% endblock navbar-content %}
+
+{% block content %}
+<div class="container">
+    <br><br><br>
+    <table class="table table-bordered" id ="example2"style="text-align: center;">
+        <thead class="table-success">
+            <tr>
+                <th>Name</th> 
+                <th>Height</th>    
+                <th>Mass</th>    
+                <th>Hair Color</th>    
+                <th>Skin color</th>    
+                <th>Eye color</th>    
+                <th>Birth Year</th>    
+                <th>Gender</th>    
+                <th>Homeworld</th>    
+                <th>Date</th>   
+                <th>Count</th>
+            </tr>
+        </thead>
+        {% for data in data%}
+        <tr>    
+            <td>{{data.name}}</td>
+            <td>{{data.height}}</td>
+            <td>{{data.mass}}</td>
+            <td>{{data.hair_color}}</td>
+            <td>{{data.skin_color}}</td>
+            <td>{{data.eye_color}}</td>
+            <td>{{data.birth_year}}</td>
+            <td>{{data.gender}}</td>
+            <td>{{data.homeworld}}</td>
+            <td>{{data.date}}</td>
+            <td></td>
+        </tr>
+        {% endfor %}
+    </table>
+
+
+</div>
+{% endblock content %}
