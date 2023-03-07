@@ -41,21 +41,31 @@ will print the results of the count in the terminal.
 where ``` filename, column1, column2 ``` can be supplied with name of file and column names to be combined to make the count, respectively.
 
 
+![screenshot_api](https://user-images.githubusercontent.com/26067833/223445157-3afde27d-2588-493d-ad61-8025031dc013.png)
+
+
 #Code structure
 
 api - does the initial extraction and views for html pages
+
 transform - does the data transformation
+
 load - saves the final file and adds metadata to model
+
 templates - html files
+
 stagefiles
+
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;intermediate - files stored after each transformation as ```filename_stage_number```
+    
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;final - files stored in ```filename.csv``` format.
+ 
 
 #TODO
 
 1) Count functionality is now implemented as API. Write Javascript functions and change the views accordingly to implement the functionality as per the requirements.
 2) Exception handling for requests and files
-3) Write tests for the functions with pytest and pytest-cov to check the coverage.
-4) Setup lint and formating with pylint, black, isort etc
-5) CI/CD for deployment.
+4) Write tests for the functions with pytest and pytest-cov to check the coverage.
+5) Setup lint and formating with pylint, black, isort etc
+6) CI/CD for deployment.
 
