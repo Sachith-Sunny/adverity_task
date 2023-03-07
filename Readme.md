@@ -56,9 +56,9 @@ templates - html files
 
 stagefiles
 
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;intermediate - files stored after each transformation as ```filename_stage_number```
+    intermediate - files stored after each transformation as ```filename_stage_number```
     
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;final - files stored in ```filename.csv``` format.
+    final - files stored in ```filename.csv``` format.
  
 
 #TODO
